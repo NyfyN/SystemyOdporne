@@ -1,0 +1,9 @@
+Backend robimy we flasku, bo po cholerę się męczyć
+Robimy CRC
+Wstępny podział obowiązków:
+- Emil -> Główna struktura backendu, mniejsza część testów
+- Kubunia -> Testy + co tylko mozesz
+- Ja -> Frontend i algorytm CRC po stronie backendu
+
+
+Wyjdzie w praniu co i jak, role najpewniej będą płynne. Głownie robimy na branchu "dev", a tylko działające na "master", coby po pijaku nic nie zepsuć na stałe. Na GH commity jakie chcemy, wystawka i tak będzie na gitlab Młodawskiego, więc tam kulturka
