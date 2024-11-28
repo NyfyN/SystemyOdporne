@@ -75,7 +75,6 @@ def simulate_message_transfer(path, message, polynomial, error_rate):
         print(f"Transmitting from Node {path[i]} to Node {path[i + 1]}...")
         current_message = introduce_error(current_message, error_rate)
         print(f"Message received at Node {path[i + 1]}: {current_message}")
-
         if not crc_validate(current_message, polynomial):
             print(f"Error detected at Node {path[i + 1]}! Transmission failed.")
             return False
