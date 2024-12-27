@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"  # Mapuj porty kontenera na porty hosta
+    volumes:
+      - ./src:/app/src
+      - ./static:/app/static
+      - ./templates:/app/templates
+
+    environment:
+      - PYTHONUNBUFFERED=1

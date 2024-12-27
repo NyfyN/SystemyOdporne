@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Strona główna{% endblock %}
+{% block content %}
+<h1>Sprawdź kodowanie CRC</h1>
+<form method="POST" action="/crc">
+    <label for="data">Wiadomość (bity 0/1):</label><br>
+    <input type="text" id="data" name="data" required><br><br>
+
+    <label for="poly">Wielomian (bity 0/1):</label><br>
+    <input type="text" id="poly" name="poly" required><br><br>
+
+    <button type="submit">Wyślij</button>
+</form>
+{% endblock %}
