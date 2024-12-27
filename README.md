@@ -9,9 +9,8 @@
 ## KROK2: Wykrycie i zaznaczenie błędów (w tym przypadku kolorem czerwonym)
 ![image](https://github.com/user-attachments/assets/7abd732e-dfc1-4306-afea-fe1330f60f8b)
 
-## KROK3: Poprawienie ewentualnych błędów
-
-## KROK4: Zaznaczenie poprawionych błędów na zielono
+## KROK3: Poprawienie ewentualnych błędów i pokolorowanie ich
+![image](https://github.com/user-attachments/assets/73bd926a-cba6-4789-b0df-7a2507ea4281)
 
 ## KROK5: Wypisanie wiadomości końcowej z poprawionymi będami
 
