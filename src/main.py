@@ -33,20 +33,12 @@ def crc():
         crc_corrected, errors)
 
     # Zwróć rezultat
-    return f"""
-    <head>
-        <meta charset="UTF-8">
-        <title>CRC Result</title>
-        <link rel="stylesheet" href="/static/css/style.css">
-    </head>
-    <div class="result">
-        <h2>Wiadomość pierwotna: {data}</h2>
-        <h2>Wiadomość po błędach: {highlighted_message_with_errors}</h2>
-        <h2>Wiadomość po naprawie: {highlighted_message_without_errors}</h2>
-        <h3>Wykryte błędy na pozycjach: {', '.join(map(str, errors)) if errors else 'Brak błędów'}</h3>
-        <h3>Poprawione błędy na pozycjach: {', '.join(map(str, errors)) if crc_corrected else 'Brak błędów'}</h3>
-    </div>
-    """
+    return render_template('crc.html',
+                           data=data,
+                           highlighted_message_with_errors=highlighted_message_with_errors,
+                           highlighted_message_without_errors=highlighted_message_without_errors,
+                           errors=', '.join(map(str, errors)) if errors else 'Brak błędów',
+                           crc_corrected=', '.join(map(str, errors)) if crc_corrected else 'Brak błędów')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}CRC Result{% endblock %}
+{% block content %}
+    <div class="result">
+        <h2>Wiadomość pierwotna: {{ data }}</h2>
+        {% autoescape false %}
+        <h2>Wiadomość po błędach: {{ highlighted_message_with_errors}}</h2>
+        <h2>Wiadomość po naprawie: {{ highlighted_message_without_errors }}</h2>
+        <h3>Wykryte błędy na pozycjach: {{ errors }}</h3>
+        <h3>Poprawione błędy na pozycjach: {{ crc_corrected }}</h3>
+        {% endautoescape %}
+    </div>
+{% endblock %}

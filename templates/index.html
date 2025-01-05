@@ -2,7 +2,7 @@
 {% block title %}Strona główna{% endblock %}
 {% block content %}
 <h1>Sprawdź kodowanie CRC</h1>
-<form method="POST" action="/crc">
+<form method="POST" action={{ url_for('crc') }}>
     <label for="data">Wiadomość (bity 0/1):</label><br>
     <input type="text" id="data" name="data" required><br><br>
 
