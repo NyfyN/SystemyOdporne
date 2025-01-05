@@ -2,7 +2,8 @@ from flask import Flask, request, render_template
 from crc_backend import introduce_error, crc_validate, highlight_errors
 from crc_backend import highlight_corrected, crc_correct
 
-app = Flask(__name__,  template_folder="/app/templates")
+app = Flask(__name__,  template_folder="/app/templates",
+            static_folder="/app/static")
 app.config['SECRET_KEY'] = 'secret_key'
 
 
@@ -33,11 +34,18 @@ def crc():
 
     # Zwróć rezultat
     return f"""
-    <h2>Wiadomość pierwotna: {data}</h2>
-    <h2>Wiadomość po błędach: {highlighted_message_with_errors}</h2>
-    <h2>Wiadomość po naprawie: {highlighted_message_without_errors}</h2>
-    <h3>Wykryte błędy na pozycjach: {', '.join(map(str, errors)) if errors else 'Brak błędów'}</h3>
-    <h3>Poprawione błędy na pozycjach: {', '.join(map(str, errors)) if crc_corrected else 'Brak błędów'}</h3>
+    <head>
+        <meta charset="UTF-8">
+        <title>CRC Result</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <div class="result">
+        <h2>Wiadomość pierwotna: {data}</h2>
+        <h2>Wiadomość po błędach: {highlighted_message_with_errors}</h2>
+        <h2>Wiadomość po naprawie: {highlighted_message_without_errors}</h2>
+        <h3>Wykryte błędy na pozycjach: {', '.join(map(str, errors)) if errors else 'Brak błędów'}</h3>
+        <h3>Poprawione błędy na pozycjach: {', '.join(map(str, errors)) if crc_corrected else 'Brak błędów'}</h3>
+    </div>
     """
 
 
