@@ -16,22 +16,22 @@ def binary_to_text(binary):
     return ''.join(chr(int(char, 2)) for char in chars)
 
 
-def crc_encode(data, polynomial):
-    """
-    Oblicza CRC dla dowolnego tekstu przy użyciu zadanego wielomianu.
-    """
-    data_binary = text_to_binary(data)  # Zamiana tekstu na binarny ciąg
-    data_bits = list(data_binary)
-    poly_bits = list(polynomial)
-    data_bits.extend(['0'] * (len(poly_bits) - 1))  # Dodanie bitów zerowych
+# def crc_encode(data, polynomial):
+#     """
+#     Oblicza CRC dla dowolnego tekstu przy użyciu zadanego wielomianu.
+#     """
+#     data_binary = text_to_binary(data)  # Zamiana tekstu na binarny ciąg
+#     data_bits = list(data_binary)
+#     poly_bits = list(polynomial)
+#     data_bits.extend(['0'] * (len(poly_bits) - 1))  # Dodanie bitów zerowych
 
-    for i in range(len(data_bits) - len(poly_bits) + 1):
-        if data_bits[i] == '1':
-            for j in range(len(poly_bits)):
-                data_bits[i + j] = str(int(data_bits[i + j] != poly_bits[j]))
+#     for i in range(len(data_bits) - len(poly_bits) + 1):
+#         if data_bits[i] == '1':
+#             for j in range(len(poly_bits)):
+#                 data_bits[i + j] = str(int(data_bits[i + j] != poly_bits[j]))
 
-    remainder = ''.join(data_bits[-(len(poly_bits) - 1):])  # Reszta CRC
-    return data_binary + remainder  # Dołączenie reszty CRC do oryginalnego ciągu
+#     remainder = ''.join(data_bits[-(len(poly_bits) - 1):])  # Reszta CRC
+#     return data_binary + remainder  # Dołączenie reszty CRC do oryginalnego ciągu
 
 
 def highlight_errors(message, errors):
