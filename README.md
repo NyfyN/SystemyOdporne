@@ -12,6 +12,11 @@
 ## CZĘŚĆ 1
 
 ### KROK 1: Dodanie wiadomości (forma bez znaczenia, tekst, liczbowa lub binarna)
+![image](https://github.com/user-attachments/assets/00a082a9-6ce0-4c1f-aff1-5ff7dc91d33d)
+
+### KROK 2: Dodanie wielomianu w celu korekcji CRC (wraz z obsługą wymuszenia formu binarnej 0/1
+![image](https://github.com/user-attachments/assets/090dba13-219e-4193-909b-b60860bbd309)
+
 
 
 ## CZĘŚĆ 2
