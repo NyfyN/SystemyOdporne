@@ -6,7 +6,7 @@
 ## EMIL ADAMUS: Wstępna implementacja + Flask + Jinja
 ## MATEUSZ DZIEDZIC: Obiektowa implementacja CRC + Jinja + CSS
 ## JAKUB SUWAŁA: Przetwarzanie tekstu na ciąg binarny i ciągu binarnego na tekst + Jinja + CSS
-=======
+-----------------------------------------------------------------------------------------------
 # OPIS WYGLĄDU APLIKACJI
 
 
