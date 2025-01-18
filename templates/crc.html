@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}CRC Result{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/crc.css') }}">
+{% endblock %}
+{% block content %}
+
+
+
+<div class="result">
+    <div class="first">
+        <h1>Wiadomość pierwotna: {{ data }}</h1>
+    </div>
+    {% autoescape false %}
+    <div class="second">
+        <h2>Wiadomość po błędach (SŁOWNIE): <br>{{ error_string_data | safe }}</h2>
+        <h2>Wiadomość po błędach (BINARNIE): {{ highlighted_message_with_errors | safe}}</h2>
+    </div>
+    <div class="third">
+        <h2>Wiadomość po naprawie (SŁOWNIE): <br>{{ string_message_without_errors | safe}}</h2>
+        <h2>Wiadomość po naprawie (BINARNIE): {{ highlighted_message_without_errors | safe}}</h2>
+    </div>
+    <div class="fourth">
+        <h3>Wykryte błędy na pozycjach: {{ errors }}</h3>
+        <h3>Poprawione błędy na pozycjach: {{ crc_corrected }}</h3>
+    </div>
+    {% endautoescape %}
+</div>
+{% endblock %}
