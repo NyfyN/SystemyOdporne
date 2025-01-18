@@ -9,7 +9,9 @@
 -----------------------------------------------------------------------------------------------
 # OPIS WYGLĄDU APLIKACJI
 
+## CZĘŚĆ 1
 
+### KROK 1: Dodanie wiadomości (forma bez znaczenia, tekst, liczbowa lub binarna)
 
 
 ## CZĘŚĆ 2
